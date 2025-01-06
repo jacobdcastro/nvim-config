@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
 
@@ -14,19 +14,43 @@ return {
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc", "html", "css", "json", "markdown", "rust", "tsx", "yaml", "typescript",
-        "toml", "solidity", "regex", "python", "make", "just", "javascript", "go", "dockerfile"
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "json",
+        "markdown",
+        "rust",
+        "tsx",
+        "yaml",
+        "typescript",
+        "toml",
+        "solidity",
+        "regex",
+        "python",
+        "make",
+        "just",
+        "javascript",
+        "go",
+        "dockerfile",
+      },
+    },
   },
 
   {
-    'mrcjkb/rustaceanvim',
-    version = '^5', -- Recommended
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
     lazy = false, -- This plugin is already lazy
+  },
+
+  {
+    "github/copilot.vim",
+    -- lazy = false,
+    event = "InsertEnter",
   },
 
   {
@@ -74,13 +98,12 @@ return {
       },
       {
         -- Make sure to set this up properly if you have lazy=true
-        'MeanderingProgrammer/render-markdown.nvim',
+        "MeanderingProgrammer/render-markdown.nvim",
         opts = {
           file_types = { "markdown", "Avante" },
         },
         ft = { "markdown", "Avante" },
       },
     },
-
-  }
+  },
 }
