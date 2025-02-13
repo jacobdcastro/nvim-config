@@ -10,7 +10,7 @@ vim.o.guifont = "JetBrainsMono NF:h10"
 -- vim.opt.guiligatures = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~"
 
 M.base46 = {
-  theme = "onedark",
+  theme = "one_light",
 
   hl_override = {
     Comment = { italic = true },
