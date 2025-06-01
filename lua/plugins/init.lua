@@ -155,4 +155,16 @@ return {
       },
     },
   },
+
+  {
+    "f-person/auto-dark-mode.nvim",
+    set_dark_mode = function()
+      require("base46").load_theme "onedark"
+    end,
+    set_light_mode = function()
+      require("base46").load_theme "one_light"
+    end,
+    update_interval = 3000,
+    fallback = "dark",
+  },
 }

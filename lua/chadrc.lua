@@ -10,7 +10,7 @@ vim.o.guifont = "JetBrainsMono NF:h10"
 -- vim.opt.guiligatures = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~"
 
 M.base46 = {
-  theme = "one_light",
+  theme = "onedark",
 
   hl_override = {
     Comment = { italic = true },
@@ -26,12 +26,15 @@ require("nvim-tree").setup {
   filters = {
     dotfiles = false, -- Set to false to show dotfiles
   },
+  git = {
+    ignore = false, -- Set to false to show git ignored files (like .env)
+  },
 }
 
 require("telescope").setup {
   pickers = {
     find_files = {
-      hidden = true,
+      hidden = false,
     },
   },
 }
