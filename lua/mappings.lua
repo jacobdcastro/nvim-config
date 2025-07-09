@@ -2,6 +2,7 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true }) -- Pressing ESC exits terminal mode
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("n", "<Leader>dd", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
